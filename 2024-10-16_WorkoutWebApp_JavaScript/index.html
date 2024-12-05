@@ -1,0 +1,101 @@
+<!--Kaci Craycraft
+    kcraycraft45-->
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+    <head>
+        <meta charset="UTF-8">
+        <title>GetFit</title>
+        <link rel="stylesheet" href="css/index.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    </head>
+    <body>
+        <main class="container font-monospace">
+            <div id="content-changing" style="display: none">false</div>
+            <div id="left-half-block">
+            <form id="base-form" method="post" action="index.html">
+                <table id="base-tbl" class="table table-striped table-hover" >
+                    <caption>Saved Exercises</caption>
+                    <thead style="height: 3px;">
+                        <tr>
+                            <td style = "width:10%; visibility: hidden;">#</td>
+                            <td style = "width:20%; visibility: hidden;">Type</td>
+                            <td style = "width:20%; visibility: hidden;">Workout</td>
+                            <td style = "width:30%; visibility: hidden;">Parameters</td>
+                            <td style = "width:10%; visibility: hidden;">Delete</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+                <button id="new-wo-btn" class="btn" type="button">+</button>
+                <div id="workouts"></div>
+            </form>
+            </div>
+            <div id="upper-right-quadrant-block">
+                <form id="start-wo">
+                    <div id="start-wo-barrier">
+                        <h2 class="d-inline-block"></h2>
+                        <div id="start-wo-type-picture" class="d-inline-block" style="height: 30px; width: 30px;">
+                            <img src="" alt="" />
+                            <img src="images/timer.png" class="d-inline-block" alt="timer-icon" style="visibility: hidden; margin-bottom: 8px; height: 30px; width: 30px;"/>
+                        </div>
+                        <h2></h2>
+                        <button id="edit-wo-btn" type="button" class="edit-wo-btn btn">Edit</button>
+                        <button id="start-wo-btn" type="button" class="btn">Start</button>
+                        <button id="close-pop-up" type="button" class="display-base btn">Close</button>
+                    </div>
+                    <div id="workout-officially-started">
+                        <h1 id="confirmed-start-wo-name"></h1>
+                        <div id="confirmed-start-wo-timer">
+                        </div>
+                        <div id="confirmed-start-wo-set-rep">
+                            <ul></ul>
+                        </div>
+                        <button id="stop-started-wo" type="button" class="display-base btn">End</button>
+                        <button type="button" id="pause-timer" class="btn d-inline-block" style="opacity:0">||</button>
+                        <button type="button" id="play-timer" class="btn d-inline-block" style="opacity:0">▷</button>
+                    </div>
+                </form>
+            </div>
+            <div id="lower-right-quadrant-block">
+            <form id="wo-form" >
+                <div id="wo-form-header"></div>
+                <button type="button" class="btn mb-3" id="set-rep-choice-btn" ><img src="images/dumbbell.png" style="height: 1.5vw; width: 1.5vw;" alt="dumbbell-icon"/></button>
+                <button type="button" class="btn mb-3" id="timer-choice-btn"><img src="images/timer.png" style="height: 1.5vw; width: 1.5vw;" alt="timer-icon"/></button>
+                <br />
+                <div id="wo-name" class="invisible-at-first form-floating">
+                    <input id="wo-name-input" placeholder="" type="text" class="form-control w-50 mb-1" minlength="1" required/>
+                        <label for="wo-name-input">Exercise:</label>
+                </div>
+                <br class="invisible-at-first"/>
+                <div id="parameters" class="invisible-at-first">
+                    <div id="timer-parameters">
+                        <input type="number" placeholder="" min="0" value="0" id="timer-hour-input" class="form-control w-25 d-inline-block" required/>
+                            <label for="timer-hour-input" class="form-label d-inline-block"></label>
+                        <p class="d-inline-block">&nbsp:&nbsp</p>
+                        <input type="number" placeholder="" min="0" max=59 value="0" id="timer-minute-input" class="form-control w-25 d-inline-block" required/>
+                            <label for="timer-minute-input" class="form-label d-inline-block"></label>
+                    </div>
+                    <div id="set-rep-parameters">
+                        <input type="number" placeholder="sets" min="1" value="1" id="set-rep-set-input" class="form-control w-25 mb-2 d-inline-block" required/>
+                            <label for="set-rep-set-input" class="form-label d-inline-block">Sets</label>
+                        <br />
+                        <input type="number" placeholder="reps" min="1" value="1" id="set-rep-rep-input" class="form-control w-25 mb-2 d-inline-block" required/>
+                            <label for="set-rep-rep-input" class="form-label d-inline-block">Reps</label>
+                    </div>
+                </div>
+                <br />
+                <button id="wo-save-btn" class="btn btn-primary invisible-at-first d-inline-block" type="submit">Save</button>
+                <button id="cancel-edits-or-add" class = "btn btn-secondary display-base" type="button">Cancel</button>
+                <div id="wo-form-footer"></div>
+            </form>
+            </div>
+            <div id="cooldown-timer" style="opacity: 0">
+                <h2>Cooldown</h2>
+                <h2 id="cooldown-timer-text"></h2>
+            </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+            <script type="module" src="js/index.mjs"></script>
+        </main>
+    </body>
+</html>

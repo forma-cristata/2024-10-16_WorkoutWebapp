@@ -1,0 +1,2 @@
+[{"id":0, "type":"set/rep", "name":"Dips", "sets":4, "reps":10},
+{"id":1, "type":"timer", "name":"Running", "hours":1, "minutes":12}]
