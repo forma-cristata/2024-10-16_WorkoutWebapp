@@ -8,9 +8,6 @@ A simple web application to help you plan and track your fitness journey. Whethe
     - Built-in countdown timer for timed exercises
     - Mark workouts as complete with visual indicators
     - Edit or delete exercises as needed
-
-## Special Features
-
 - Filter workouts by type or completion status
     - Your routines are saved automatically
     - Pause and resume timers during workouts
